@@ -10,7 +10,7 @@ wget -N https://raw.githubusercontent.com/Toyoui/DGshell/main/Dgshell.sh && bash
 ```
 cd /home/data/mysql/config vi my.cnf
 ```
-
+### Fill in the following
 ```
 [mysqld]
 pid-file        = /var/run/mysqld/mysqld.pid
