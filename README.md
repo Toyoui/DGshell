@@ -1,7 +1,9 @@
 # DGshell
 Deploy goedge Prelude based on docker in debian10.
+Please ensure the purity of the system.
+Requirements: Debian 64 bit architecture
 
-## 1.Runbase
+## 1.Run 60% bases
 ```
 wget -N https://raw.githubusercontent.com/Toyoui/DGshell/main/Dgshell.sh && bash Dgshell.sh
 ```
