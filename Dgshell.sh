@@ -62,7 +62,3 @@ apt install wget curl unzip tar cron socat -y
 echo -e "${green}开始安装${plain}"
 install_docker
 install_tools $1
-
-
-
-
