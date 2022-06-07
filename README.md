@@ -1,16 +1,16 @@
 # DGshell
 Deploy goedge Prelude based on docker in debian10.
 
-## Runbase
+## 1.Runbase
 ```
 wget -N https://raw.githubusercontent.com/Toyoui/DGshell/main/Dgshell.sh && bash Dgshell.sh
 ```
 
-## Edit my.cnf
+## 2.Edit my.cnf
 ```
 cd /home/data/mysql/config vi my.cnf
 ```
-### Fill in the following
+### 2.1.Fill in the following
 ```
 [mysqld]
 pid-file        = /var/run/mysqld/mysqld.pid
@@ -26,8 +26,8 @@ symbolic-links=0
 default_authentication_plugin= mysql_native_password
 ```
 
-## Run bases by docker
-### Run ansible/centos7-ansible
+## 3.Run bases by docker
+### 3.1.Run ansible/centos7-ansible
 ```
 docker images
 ```
@@ -38,7 +38,7 @@ docker run -d -i -t IMAGE ID /bin/bash
 
 // eg: docker run -d -i -t 688353a31fde /bin/bash
 ```
-### Run mysql8
+### 3.2.Run mysql8
 ```
 docker run \
     -p 3306:3306 \
@@ -51,8 +51,8 @@ docker run \
     --restart=always \
     -d mysql
 ```
-## Get and Install Godege
-### 1.Get
+## 4.Get and Install Godege
+### 4.1.Get
 [Click to Goedge](https://goedge.cn/downloads)
 
 ![图片](https://user-images.githubusercontent.com/91711069/172288027-2d97a4a1-18ec-4115-96d3-0937e1e4a463.png)
@@ -63,7 +63,7 @@ wget downloadlink
 
 //eg: wget https://dl.goedge.cn/edge/v0.4.7.1/edge-admin-linux-amd64-plus-v0.4.7.1.zip
 ```
-### 2.Install
+### 4.2.Install
 ```
 unzip -o edge-admin-linux-amd64-plus-v0.4.7.1.zip
 cd /root/edge-admin
