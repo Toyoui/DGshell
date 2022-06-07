@@ -25,3 +25,16 @@ symbolic-links=0
 
 default_authentication_plugin= mysql_native_password
 ```
+
+## Run bases by docker
+### Run ansible/centos7-ansible
+```
+docker images
+```
+![图片](https://user-images.githubusercontent.com/91711069/172286956-0f2529d6-cf6b-4a9a-8703-568656318ae6.png)
+
+```
+docker run -d -i -t IMAGE ID /bin/bash
+// eg: docker run -d -i -t 688353a31fde /bin/bash
+```
+
