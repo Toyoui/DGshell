@@ -11,6 +11,7 @@ cur_dir=$(pwd)
 [[ $EUID -ne 0 ]] && echo -e "${red}错误：${plain} 必须使用root用户运行此脚本！\n" && exit 1
 
 arch=$(arch)
+archt=arch
 
 if [[ $arch == "x86_64" || $arch == "x64" || $arch == "amd64" ]]; then
     arch="64"
@@ -46,7 +47,7 @@ sudo apt-get install \
 curl -fsSL https://mirrors.ustc.edu.cn/docker-ce/linux/debian/gpg | sudo apt-key add
 #使用以下指令设置稳定版仓库
 sudo add-apt-repository \
-   "deb [arch=${arch}] https://mirrors.ustc.edu.cn/docker-ce/linux/debian \
+   "deb [arch=archt] https://mirrors.ustc.edu.cn/docker-ce/linux/debian \
   $(lsb_release -cs) \
   stable"
 #安装 Docker Engine-Community
