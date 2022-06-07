@@ -59,6 +59,17 @@ install_tools() {
 apt install wget curl unzip tar cron socat -y
 }
 
+pull-nginx-im-mysqlf() {
+docker run --name nginx-test -p 80:80 -d nginx
+docker pull ansible/centos7-ansible
+docker pull mysql:8.0
+mkdir -p /home/data/mysql/data
+mkdir -p /home/data/mysql/log
+mkdir -p /home/data/mysql/config
+chmod -R 755 /home/data/mysql/
+}
+
 echo -e "${green}开始安装${plain}"
 install_docker
-install_tools $1
+install_tools
+pull-nginx-im-mysqlf $1
